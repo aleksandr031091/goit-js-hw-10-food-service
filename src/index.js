@@ -11,5 +11,3 @@ function addMarkupMenu(arr) {
   menu.insertAdjacentHTML('beforeend', markup);
 }
 addMarkupMenu(menuElement);
-
-console.log(menuElement);
