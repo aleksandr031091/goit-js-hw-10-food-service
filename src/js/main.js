@@ -23,14 +23,20 @@ refs.toggle.addEventListener('change', changeTheam);
 
 function changeTheam(e) {
   if (e.target.checked) {
-    refs.body.classList.add(Theme.DARK);
-    refs.body.classList.remove(Theme.LIGHT);
-    localStorage.setItem('theme', Theme.DARK);
+    theamDark();
   } else {
-    refs.body.classList.add(Theme.LIGHT);
-    refs.body.classList.remove(Theme.DARK);
-    localStorage.setItem('theme', Theme.LIGHT);
+    theamLight();
   }
+}
+function theamDark() {
+  refs.body.classList.add(Theme.DARK);
+  refs.body.classList.remove(Theme.LIGHT);
+  localStorage.setItem('theme', Theme.DARK);
+}
+function theamLight() {
+  refs.body.classList.add(Theme.LIGHT);
+  refs.body.classList.remove(Theme.DARK);
+  localStorage.setItem('theme', Theme.LIGHT);
 }
 
 const localStorageThem = localStorage.getItem('theme', Theme.LIGHT);
